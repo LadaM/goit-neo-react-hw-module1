@@ -1,12 +1,32 @@
 import React from 'react';
-import styles from './App.module.css';
+import Profile from './components/Profile.jsx';
 
-function App() {
-  return (
-    <div className={styles.header}>
-      <h1>Hello, Vite + React!</h1>
-    </div>
-  );
-}
+const userData = {
+    username: 'Jacques Gluke',
+    tag: 'jgluke',
+    location: 'Ocho Rios, Jamaica',
+    avatar: 'https://cdn-icons-png.flaticon.com/512/2922/2922506.png',
+    stats: {
+        followers: 5603,
+        views: 4827,
+        likes: 1308,
+    },
+};
+
+
+const App = () => {
+    return (
+      <>
+          <Profile
+            name={userData.username}
+            tag={userData.tag}
+            location={userData.location}
+            avatar={userData.avatar}
+            stats={userData.stats}
+          />
+      </>
+    );
+};
+
 
 export default App;
