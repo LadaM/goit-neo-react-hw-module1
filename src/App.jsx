@@ -1,6 +1,7 @@
 import Profile from './components/Profile.jsx';
 import { userData } from './users.js';
-
+import FriendList from './components/FriendList.jsx';
+import friends from './friends.js';
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
             avatar={userData.avatar}
             stats={userData.stats}
           />
+        <FriendList friends={friends} />
       </>
     );
 };
